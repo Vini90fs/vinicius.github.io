@@ -82,14 +82,38 @@
       background: #334155;
       margin: 20px 0;
     }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 8px;
+    }
+    
+    .lang-btn {
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: #1e293b;
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #334155;
+      transition: 0.2s;
+    }
+    
+    .lang-btn:hover {
+      background: #38bdf8;
+      color: black;
+    }
   </style>
 </head>
 
 <body>
 
-<div style="position: absolute; top: 20px; right: 20px;">
-  <a href="index.html">PT</a>
-  <a href="index-en.html">EN</a>
+<div class="lang-switch">
+  <a href="index.html" class="lang-btn">PT</a>
+  <a href="index-en.html" class="lang-btn">EN</a>
 </div>
 
 <div class="container">
