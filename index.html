@@ -2,7 +2,10 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Vinicius Fernandes Soares Cardoso</title>
+  <title>Vinicius Cardoso</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       margin: 0;
@@ -17,19 +20,25 @@
       padding: 40px 20px;
     }
 
+    .topo {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .topo img {
+      width: 120px;
+      border-radius: 50%;
+    }
+
     h1 {
       color: #38bdf8;
-      font-size: 40px;
-      margin-bottom: 10px;
+      margin: 0;
     }
 
     h2 {
       color: #38bdf8;
       margin-top: 40px;
-    }
-
-    p {
-      line-height: 1.6;
     }
 
     .card {
@@ -38,6 +47,10 @@
       border-radius: 12px;
       margin-top: 15px;
       box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    p {
+      line-height: 1.6;
     }
 
     ul {
@@ -63,44 +76,97 @@
     .btn:hover {
       background: #0ea5e9;
     }
-
   </style>
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>Vinicius Fernandes Soares Cardoso</h1>
-    <img src="foto.jpg" alt="Vinicius" style="width:120px; border-radius:50%; margin-top:10px;">
-    <p>Software Engineering student at PUC Minas | </p>
+<div class="container">
 
-    <div class="card">
-      <h2>About me</h2>
-      <p>Sou estudante focado em desenvolvimento, com interesse em programação e resolução de problemas. Busco minha primeira oportunidade na área de tecnologia.</p>
+  <div class="topo">
+    <img src="foto.jpg" alt="Vinicius">
+    <div>
+      <h1>Vinicius Cardoso</h1>
+      <p>Estudante de Engenharia de Software | Buscando estágio em TI</p>
     </div>
+  </div>
 
-    <div class="card">
-      <h2>Habilidades</h2>
-      <ul>
-        <li>C</li>
-        <li>Java</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </div>
+  <div class="card">
+    <h2>Objetivo</h2>
+    <p>
+      Busco uma oportunidade de estágio na área de Tecnologia da Informação, com foco em desenvolvimento de software, onde eu possa aprender, evoluir e contribuir com soluções reais.
+    </p>
+  </div>
 
-    <div class="card">
-      <h2>Projetos</h2>
-      <a class="btn" href="https://github.com/Vini90fs" target="_blank">
-        Ver meu GitHub
-      </a>
-    </div>
+  <div class="card">
+    <h2>Sobre mim</h2>
+    <p>
+      Sou estudante de Engenharia de Software na PUC Minas (2º período), com interesse em desenvolvimento e resolução de problemas.
+      Tenho experiência com C, C++, Java, HTML e CSS através de projetos acadêmicos e estudos próprios.
+      Também utilizo ferramentas de Inteligência Artificial para acelerar aprendizado, desenvolvimento e resolução de problemas.
+    </p>
+  </div>
 
-    <div class="card">
-      <h2>Contato</h2>
-      <p>Email: vini90fs@gmail.com</p>
-    </div>
+  <div class="card">
+    <h2>Formação</h2>
+    <p><strong>Engenharia de Software</strong> — PUC Minas</p>
+    <p>Previsão de conclusão: 2028</p>
+
+    <p style="margin-top:10px;"><strong>Ensino Médio</strong> — Colégio Coleguium Ouro Preto</p>
+  </div>
+
+  <div class="card">
+    <h2>Projetos</h2>
+
+    <p><strong>Sistema de Cadastro de Veículos</strong></p>
+    <p>Desenvolvido com foco em organização de dados e lógica de programação.</p>
+
+    <p><strong>Sistema de Gerenciamento de Hotel</strong></p>
+    <p>Projeto com funcionalidades de controle e gerenciamento de operações.</p>
+
+    <p><strong>Site de Identificação de Fake News</strong></p>
+    <p>Projeto web acadêmico utilizando HTML e CSS para análise e identificação de notícias falsas.</p>
+
+    <a class="btn" href="https://github.com/Vini90fs" target="_blank">
+      <i class="fab fa-github"></i> Ver todos os projetos no GitHub
+    </a>
 
   </div>
+
+  <div class="card">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>C, C++</li>
+      <li>Java</li>
+      <li>HTML e CSS</li>
+      <li>Lógica de Programação</li>
+      <li>Estruturas de Dados</li>
+      <li>Uso de IA no desenvolvimento (ChatGPT, aprendizado e debugging)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Idiomas</h2>
+    <ul>
+      <li>Inglês — Avançado</li>
+      <li>Espanhol — Intermediário</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Contato</h2>
+
+    <p><i class="fas fa-envelope"></i> vini90fs@gmail.com</p>
+
+    <p><i class="fab fa-linkedin"></i> 
+      <a href="www.linkedin.com/in/vinicius-fernandes-soares-cardoso-7b6ab2287" target="_blank">LinkedIn</a>
+    </p>
+
+    <p><i class="fas fa-phone"></i> +55 (31) 97301-0684</p>
+
+  </div>
+
+</div>
 
 </body>
 </html>
