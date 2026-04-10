@@ -117,6 +117,33 @@
       color: white;
     }
 
+    .projeto {
+      margin-bottom: 10px;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .projeto-header {
+      padding: 12px;
+      cursor: pointer;
+      background: #f1f5f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+    
+    .projeto-header:hover {
+      background: #e2e8f0;
+    }
+    
+    .projeto-body {
+      padding: 12px;
+      display: none;
+      background: white;
+    }
   </style>
 </head>
 
@@ -176,27 +203,39 @@
 
   <div class="card">
     <h2>Projetos</h2>
-
-    <p onclick="alert('Sistema em C com uso de arrays e funções para manipulação de dados')">
-      <strong>Sistema de Cadastro de Veículos</strong>
-    </p>
-
-    <hr>
-
-    <p onclick="alert('Sistema de gerenciamento com foco em controle de operações de hotel')">
-      <strong>Sistema de Gerenciamento de Hotel</strong>
-    </p>
-
-    <hr>
-
-    <p onclick="alert('Projeto web com HTML e CSS para identificação de fake news')">
-      <strong>Site de Identificação de Fake News</strong>
-    </p>
-
-    <hr>
-
-    <p>Confira meus projetos completos:</p>
-
+  
+    <div class="projeto">
+      <div class="projeto-header" onclick="toggleProjeto(this)">
+        <span>Sistema de Cadastro de Veículos</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="projeto-body">
+        Sistema desenvolvido em C utilizando arrays e funções para cadastro e gerenciamento de veículos, com foco em organização de dados e lógica de programação.
+      </div>
+    </div>
+  
+    <div class="projeto">
+      <div class="projeto-header" onclick="toggleProjeto(this)">
+        <span>Sistema de Gerenciamento de Hotel</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="projeto-body">
+        Projeto com foco no controle de operações de um hotel, incluindo organização de dados, gerenciamento e aplicação de lógica de programação.
+      </div>
+    </div>
+  
+    <div class="projeto">
+      <div class="projeto-header" onclick="toggleProjeto(this)">
+        <span>Site de Identificação de Fake News</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="projeto-body">
+        Projeto web desenvolvido com HTML e CSS para identificação e apresentação de informações sobre notícias falsas.
+      </div>
+    </div>
+  
+    <p style="margin-top:15px;">Confira meus projetos completos:</p>
+  
     <a class="btn" href="https://github.com/Vini90fs" target="_blank">
       <i class="fab fa-github"></i> GitHub
     </a>
@@ -226,6 +265,21 @@
   </div>
 
 </div>
+
+  <script>
+    function toggleProjeto(element) {
+      const body = element.nextElementSibling;
+      const icon = element.querySelector("i");
+    
+      if (body.style.display === "block") {
+        body.style.display = "none";
+        icon.style.transform = "rotate(0deg)";
+      } else {
+        body.style.display = "block";
+        icon.style.transform = "rotate(180deg)";
+      }
+    }
+    </script>
 
 </body>
 </html>
