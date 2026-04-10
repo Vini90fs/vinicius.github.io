@@ -10,8 +10,12 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     .container {
@@ -31,21 +35,26 @@
     }
 
     h1 {
-      color: #38bdf8;
+      color: #0f172a;
       margin: 0;
     }
 
     h2 {
-      color: #38bdf8;
+      color: #0f172a;
       margin-top: 40px;
     }
 
     .card {
-      background: #1e293b;
+      background: white;
       padding: 20px;
       border-radius: 12px;
       margin-top: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     p {
@@ -57,7 +66,7 @@
     }
 
     a {
-      color: #38bdf8;
+      color: #2563eb;
       text-decoration: none;
       font-weight: bold;
     }
@@ -66,20 +75,21 @@
       display: inline-block;
       margin-top: 10px;
       padding: 10px 15px;
-      background: #38bdf8;
-      color: black;
+      background: #2563eb;
+      color: white;
       border-radius: 8px;
-      transition: 0.3s;
+      transition: 0.2s;
     }
 
     .btn:hover {
-      background: #0ea5e9;
+      transform: scale(1.05);
+      background: #1d4ed8;
     }
 
     hr {
       border: none;
       height: 1px;
-      background: #334155;
+      background: #e2e8f0;
       margin: 20px 0;
     }
 
@@ -90,21 +100,48 @@
       display: flex;
       gap: 8px;
     }
-    
+
     .lang-btn {
       padding: 6px 12px;
       border-radius: 8px;
-      background: #1e293b;
-      color: #38bdf8;
+      background: #e2e8f0;
+      color: #0f172a;
       text-decoration: none;
       font-weight: bold;
-      border: 1px solid #334155;
+      transition: 0.2s;
+    }
+
+    .lang-btn:hover {
+      background: #2563eb;
+      color: white;
+    }
+
+    .projeto {
+      margin-bottom: 10px;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .projeto-header {
+      padding: 12px;
+      cursor: pointer;
+      background: #f1f5f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
       transition: 0.2s;
     }
     
-    .lang-btn:hover {
-      background: #38bdf8;
-      color: black;
+    .projeto-header:hover {
+      background: #e2e8f0;
+    }
+    
+    .projeto-body {
+      padding: 12px;
+      display: none;
+      background: white;
     }
   </style>
 </head>
@@ -122,7 +159,7 @@
     <img src="foto.jpg" alt="Vinicius">
     <div>
       <h1>Vinicius Fernandes Soares Cardoso</h1>
-      <p>Software Engineering Student | Developer in training</p>
+      <p>Software Engineering Student</p>
     </div>
   </div>
 
@@ -130,82 +167,77 @@
     <h2>Personal Information</h2>
 
     <p><strong>Age:</strong> 20 years old</p>
-  
     <p><i class="fas fa-envelope"></i> vini90fs@gmail.com</p>
-  
     <p><i class="fab fa-instagram"></i> @vini.fsc</p>
-  
     <p><i class="fas fa-phone"></i> +55 (31) 97301-0684</p>
-  
-    <p><i class="fab fa-linkedin"></i> 
-      <a href="https://www.linkedin.com/in/vinicius-fernandes-soares-cardoso-7b6ab2287" target="_blank">LinkedIn</a>
-    </p>
-  
-  </div>
 
-  <div class="card">
-    <h2>Objective</h2>
-    <p>
-      I am seeking an internship opportunity in the Information Technology field, where I can learn, grow, and contribute to real-world solutions.
+    <p><i class="fab fa-linkedin"></i> 
+      <a href="https://www.linkedin.com/in/vinicius-fernandes-soares-cardoso-7b6ab2287" target="_blank">
+        LinkedIn
+      </a>
     </p>
   </div>
 
   <div class="card">
     <h2>About Me</h2>
-  
+
     <p>
-      I am a Software Engineering student at PUC Minas (2nd semester), with an interest in software development and problem solving.
-      I have experience with C, C++, Java, HTML, and CSS through academic projects and personal studies.
+      I am a Software Engineering student at PUC Minas, and I have always been interested in technology in general, software development, and problem solving.
+      I have experience with front-end development, C, C++, Python, and Java through academic projects and personal studies, as well as ease in using
+      Artificial Intelligence tools in the development workflow to increase productivity and efficiently solve problems.
     </p>
-  
+
     <p>
-      I am interested in backend development and focused on improving my skills through practical projects.
-      I have strong teamwork skills, good communication, proactivity, and willingness to learn.
+      I am mainly focused on improving my skills through practical projects and studies.
+      I have strong teamwork skills, good communication, proactivity, and always a willingness to learn.
     </p>
-  
-    <p>
-      I also use Artificial Intelligence tools to accelerate learning, development, and problem solving.
-    </p>
-  
+
   </div>
 
   <div class="card">
     <h2>Education</h2>
-    <p style="margin-top:10px;"><strong>High School Completed</strong> — Coleguium Ouro Preto</p>
+    <p><strong>High School Completed</strong> — Coleguium Ouro Preto</p>
     <p><strong>Software Engineering</strong> — PUC Minas — Expected graduation: 2028</p>
   </div>
 
   <div class="card">
-  <h2>Projects</h2>
-
-    <p><strong>Vehicle Registration System</strong></p>
-    <p>
-      System developed in C for registering and managing vehicles, using arrays and functions for data manipulation and organization.
-    </p>
+    <h2>Projects</h2>
   
-    <hr>
+    <div class="projeto">
+      <div class="projeto-header" onclick="toggleProjeto(this)">
+        <span>Vehicle Registration System</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="projeto-body">
+        System developed in C using arrays and functions for registering and managing vehicles, focusing on data organization and programming logic.
+      </div>
+    </div>
   
-    <p><strong>Hotel Management System</strong></p>
-    <p>
-      Project developed focusing on managing hotel operations, including data organization and management logic.
-    </p>
+    <div class="projeto">
+      <div class="projeto-header" onclick="toggleProjeto(this)">
+        <span>Hotel Management System</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="projeto-body">
+        Project focused on managing hotel operations, including data organization, management, and application of programming logic.
+      </div>
+    </div>
   
-    <hr>
+    <div class="projeto">
+      <div class="projeto-header" onclick="toggleProjeto(this)">
+        <span>Fake News Identification Website</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="projeto-body">
+        Web project developed using HTML and CSS to identify and present information about fake news.
+      </div>
+    </div>
   
-    <p><strong>Fake News Identification Website</strong></p>
-    <p>
-      Web project developed using HTML and CSS with the objective of identifying and presenting information about fake news.
-    </p>
-
-    <hr>
-    <p style="margin-top:15px;">
-      Check out my full projects on GitHub:
-    </p>
-    
+    <p style="margin-top:15px;">Check out my full projects:</p>
+  
     <a class="btn" href="https://github.com/Vini90fs" target="_blank">
-      <i class="fab fa-github"></i> Access GitHub
+      <i class="fab fa-github"></i> GitHub
     </a>
-  
   </div>
 
   <div class="card">
@@ -213,27 +245,40 @@
     <ul>
       <li>C, C++</li>
       <li>Java</li>
-      <li>HTML and CSS</li>
+      <li>Python</li>
+      <li>Front-End Development</li>
       <li>Git and GitHub</li>
-      <li>Object-Oriented Programming (OOP)</li>
-      <li>Data Structures (basic)</li>
+      <li>Object-Oriented Programming</li>
+      <li>Data Structures</li>
+      <li>Advanced use of AI applied to productivity and development</li>
       <li>Problem Solving</li>
-      <li>Use of AI in development (ChatGPT, learning and debugging)</li>
     </ul>
   </div>
 
   <div class="card">
     <h2>Languages</h2>
     <ul>
-      <li>Portuguese — Native</li>
       <li>English — Advanced</li>
       <li>Spanish — Intermediate</li>
     </ul>
   </div>
 
-  
-
 </div>
+
+<script>
+function toggleProjeto(element) {
+  const body = element.nextElementSibling;
+  const icon = element.querySelector("i");
+
+  if (body.style.display === "block") {
+    body.style.display = "none";
+    icon.style.transform = "rotate(0deg)";
+  } else {
+    body.style.display = "block";
+    icon.style.transform = "rotate(180deg)";
+  }
+}
+</script>
 
 </body>
 </html>
