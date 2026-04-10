@@ -10,8 +10,12 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     .container {
@@ -28,24 +32,30 @@
 
     .topo img {
       width: 120px;
+      border-radius: 50%;
     }
 
     h1 {
-      color: #38bdf8;
+      color: #0f172a;
       margin: 0;
     }
 
     h2 {
-      color: #38bdf8;
+      color: #0f172a;
       margin-top: 40px;
     }
 
     .card {
-      background: #1e293b;
+      background: white;
       padding: 20px;
       border-radius: 12px;
       margin-top: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     p {
@@ -57,7 +67,7 @@
     }
 
     a {
-      color: #38bdf8;
+      color: #2563eb;
       text-decoration: none;
       font-weight: bold;
     }
@@ -66,23 +76,25 @@
       display: inline-block;
       margin-top: 10px;
       padding: 10px 15px;
-      background: #38bdf8;
-      color: black;
+      background: #2563eb;
+      color: white;
       border-radius: 8px;
-      transition: 0.3s;
+      transition: 0.2s;
     }
 
     .btn:hover {
-      background: #0ea5e9;
+      transform: scale(1.05);
+      background: #1d4ed8;
     }
 
     hr {
       border: none;
       height: 1px;
-      background: #334155;
+      background: #e2e8f0;
       margin: 20px 0;
     }
 
+    /* BOTÃO DE IDIOMA */
     .lang-switch {
       position: absolute;
       top: 20px;
@@ -90,25 +102,23 @@
       display: flex;
       gap: 8px;
     }
-    
+
     .lang-btn {
       padding: 6px 12px;
       border-radius: 8px;
-      background: #1e293b;
-      color: #38bdf8;
+      background: #e2e8f0;
+      color: #0f172a;
       text-decoration: none;
       font-weight: bold;
-      border: 1px solid #334155;
       transition: 0.2s;
     }
-    
-    .lang-btn:hover {
-      background: #38bdf8;
-      color: black;
-    }
-  </style>
 
-  
+    .lang-btn:hover {
+      background: #2563eb;
+      color: white;
+    }
+
+  </style>
 </head>
 
 <body>
@@ -132,82 +142,67 @@
     <h2>Dados Pessoais</h2>
 
     <p><strong>Idade:</strong> 20 anos</p>
-  
     <p><i class="fas fa-envelope"></i> vini90fs@gmail.com</p>
-  
     <p><i class="fab fa-instagram"></i> @vini.fsc</p>
-  
     <p><i class="fas fa-phone"></i> +55 (31) 97301-0684</p>
-  
-    <p><i class="fab fa-linkedin"></i> 
-      <a href="https://www.linkedin.com/in/vinicius-fernandes-soares-cardoso-7b6ab2287" target="_blank">LinkedIn</a>
-    </p>
-  
-  </div>
 
-  <div class="card">
-    <h2>Objetivo</h2>
-    <p>
-      Busco uma oportunidade de estágio na área de Tecnologia da Informação, onde eu possa aprender, evoluir e contribuir com soluções reais.
+    <p><i class="fab fa-linkedin"></i> 
+      <a href="https://www.linkedin.com/in/vinicius-fernandes-soares-cardoso-7b6ab2287" target="_blank">
+        LinkedIn
+      </a>
     </p>
   </div>
 
   <div class="card">
     <h2>Sobre mim</h2>
-  
+
     <p>
       Sou estudante de Engenharia de Software na PUC Minas (2º período), com interesse em desenvolvimento de software e resolução de problemas.
       Tenho experiência com C, C++, Java, HTML e CSS através de projetos acadêmicos e estudos próprios.
     </p>
-  
+
     <p>
       Tenho interesse em desenvolvimento backend e estou focado em evoluir minhas habilidades através de projetos práticos.
       Tenho facilidade para trabalhar em equipe, boa comunicação, proatividade e disposição para aprender.
     </p>
-  
+
     <p>
       Também utilizo ferramentas de Inteligência Artificial para acelerar aprendizado, desenvolvimento e resolução de problemas.
     </p>
-  
   </div>
 
   <div class="card">
     <h2>Formação</h2>
-    <p style="margin-top:10px;"><strong>Ensino Médio Completo</strong> — Coleguium Ouro Preto</p>
+    <p><strong>Ensino Médio Completo</strong> — Coleguium Ouro Preto</p>
     <p><strong>Engenharia de Software</strong> — PUC Minas — Previsão de conclusão: 2028</p>
   </div>
 
   <div class="card">
-  <h2>Projetos</h2>
+    <h2>Projetos</h2>
 
-    <p><strong>Sistema de Cadastro de Veículos</strong></p>
-    <p>
-      Sistema desenvolvido em C para cadastro e gerenciamento de veículos, utilizando arrays e funções para manipulação e organização de dados.
-    </p>
-  
-    <hr>
-  
-    <p><strong>Sistema de Gerenciamento de Hotel</strong></p>
-    <p>
-      Projeto desenvolvido com foco em controle de operações de um hotel, incluindo organização de dados e lógica de gerenciamento.
-    </p>
-  
-    <hr>
-  
-    <p><strong>Site de Identificação de Fake News</strong></p>
-    <p>
-      Projeto web desenvolvido com HTML e CSS com o objetivo de identificar e apresentar informações sobre notícias falsas.
+    <p onclick="alert('Sistema em C com uso de arrays e funções para manipulação de dados')">
+      <strong>Sistema de Cadastro de Veículos</strong>
     </p>
 
     <hr>
-    <p style="margin-top:15px;">
-      Confira meus projetos completos no GitHub:
+
+    <p onclick="alert('Sistema de gerenciamento com foco em controle de operações de hotel')">
+      <strong>Sistema de Gerenciamento de Hotel</strong>
     </p>
-    
+
+    <hr>
+
+    <p onclick="alert('Projeto web com HTML e CSS para identificação de fake news')">
+      <strong>Site de Identificação de Fake News</strong>
+    </p>
+
+    <hr>
+
+    <p>Confira meus projetos completos:</p>
+
     <a class="btn" href="https://github.com/Vini90fs" target="_blank">
-      <i class="fab fa-github"></i> Acessar GitHub
+      <i class="fab fa-github"></i> GitHub
     </a>
-  
   </div>
 
   <div class="card">
@@ -217,10 +212,10 @@
       <li>Java</li>
       <li>HTML e CSS</li>
       <li>Git e GitHub</li>
-      <li>Programação Orientada a Objetos (POO)</li>
+      <li>Programação Orientada a Objetos</li>
       <li>Estruturas de Dados (básico)</li>
       <li>Resolução de Problemas</li>
-      <li>Uso de IA no desenvolvimento (ChatGPT, aprendizado e debugging)</li>
+      <li>Uso de IA no desenvolvimento</li>
     </ul>
   </div>
 
@@ -232,9 +227,8 @@
     </ul>
   </div>
 
-  
-
 </div>
 
 </body>
 </html>
+
