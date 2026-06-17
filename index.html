@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Vinicius Cardoso</title>
-
+ 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+ 
   <style>
     body {
       margin: 0;
@@ -13,37 +13,37 @@
       background: #f8fafc;
       color: #0f172a;
     }
-
+ 
     html {
       scroll-behavior: smooth;
     }
-
+ 
     .container {
       max-width: 900px;
       margin: auto;
       padding: 40px 20px;
     }
-
+ 
     .topo {
       display: flex;
       align-items: center;
       gap: 20px;
     }
-
+ 
     .topo img {
       width: 120px;
     }
-
+ 
     h1 {
       color: #0f172a;
       margin: 0;
     }
-
+ 
     h2 {
       color: #0f172a;
       margin-top: 40px;
     }
-
+ 
     .card {
       background: white;
       padding: 20px;
@@ -52,25 +52,25 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       transition: 0.2s;
     }
-
+ 
     .card:hover {
       transform: translateY(-5px);
     }
-
+ 
     p {
       line-height: 1.6;
     }
-
+ 
     ul {
       padding-left: 20px;
     }
-
+ 
     a {
       color: #2563eb;
       text-decoration: none;
       font-weight: bold;
     }
-
+ 
     .btn {
       display: inline-block;
       margin-top: 10px;
@@ -80,19 +80,19 @@
       border-radius: 8px;
       transition: 0.2s;
     }
-
+ 
     .btn:hover {
       transform: scale(1.05);
       background: #1d4ed8;
     }
-
+ 
     hr {
       border: none;
       height: 1px;
       background: #e2e8f0;
       margin: 20px 0;
     }
-
+ 
     /* BOTÃO DE IDIOMA */
     .lang-switch {
       position: absolute;
@@ -101,7 +101,7 @@
       display: flex;
       gap: 8px;
     }
-
+ 
     .lang-btn {
       padding: 6px 12px;
       border-radius: 8px;
@@ -111,12 +111,12 @@
       font-weight: bold;
       transition: 0.2s;
     }
-
+ 
     .lang-btn:hover {
       background: #2563eb;
       color: white;
     }
-
+ 
     .projeto {
       margin-bottom: 10px;
       border: 1px solid #e2e8f0;
@@ -144,18 +144,30 @@
       display: none;
       background: white;
     }
+ 
+    .badge {
+      display: inline-block;
+      background: #e2e8f0;
+      color: #0f172a;
+      font-size: 0.8rem;
+      font-weight: bold;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-right: 6px;
+      margin-top: 6px;
+    }
   </style>
 </head>
-
+ 
 <body>
-
+ 
 <div class="lang-switch">
   <a href="index.html" class="lang-btn">PT</a>
   <a href="index-en.html" class="lang-btn">EN</a>
 </div>
-
+ 
 <div class="container">
-
+ 
   <div class="topo">
     <img src="foto.jpg" alt="Vinicius">
     <div>
@@ -163,47 +175,69 @@
       <p>Estudante de Engenharia de Software</p>
     </div>
   </div>
-
+ 
   <div class="card">
     <h2>Dados Pessoais</h2>
-
+ 
     <p><strong>Idade:</strong> 20 anos</p>
+    <p><i class="fas fa-map-marker-alt"></i> Belo Horizonte - MG</p>
     <p><i class="fas fa-envelope"></i> vini90fs@gmail.com</p>
     <p><i class="fab fa-instagram"></i> @vini.fsc</p>
     <p><i class="fas fa-phone"></i> +55 (31) 97301-0684</p>
-
+ 
     <p><i class="fab fa-linkedin"></i> 
       <a href="https://www.linkedin.com/in/vinicius-fernandes-soares-cardoso-7b6ab2287" target="_blank">
         LinkedIn
       </a>
     </p>
   </div>
-
+ 
+  <div class="card">
+    <h2>Objetivo</h2>
+    <p>
+      Atuar na área de tecnologia, aplicando meus conhecimentos em programação e desenvolvimento de software,
+      contribuindo para a construção de soluções eficientes e meu crescimento profissional.
+    </p>
+  </div>
+ 
   <div class="card">
     <h2>Sobre mim</h2>
-
+ 
     <p>
       Sou estudante de Engenharia de Software na PUC Minas, desde sempre tive interesse em tecnologia em geral, desenvolvimento de software e resolução de problemas.
-      Tenho experiência com desenvolvimento front end, C, C++, Python e Java através de projetos acadêmicos e estudos próprios, além da facilidade do uso de ferramentas
+      Tenho experiência prática em linguagens como C, C++, Java e Python, além de familiaridade com desenvolvimento Front-End (HTML5, CSS3 e JavaScript) e Back-End com Spring Boot.
+      Também tenho experiência com bancos de dados relacionais (MySQL e PostgreSQL), adquirida por meio de projetos acadêmicos e estudos independentes, além da facilidade do uso de ferramentas
       de Inteligência Artificial no fluxo de desenvolvimento para aumento de produtividade e resolução eficiente de problemas.
     </p>
-
+ 
     <p>
       Estou focado principalmente em evoluir minhas habilidades através de projetos práticos e estudos.
       Tenho facilidade para trabalhar em equipe, boa comunicação, proatividade e sempre disposição para aprender.
     </p>
-
+ 
   </div>
-
+ 
   <div class="card">
     <h2>Formação</h2>
     <p><strong>Ensino Médio Completo</strong> — Coleguium Ouro Preto</p>
-    <p><strong>Engenharia de Software</strong> — PUC Minas — Previsão de conclusão: 2028</p>
+    <p><strong>Engenharia de Software</strong> — PUC Minas — 2° período, com disciplinas avançadas já concluídas — Previsão de conclusão: 2028</p>
   </div>
-
+ 
   <div class="card">
     <h2>Projetos</h2>
-  
+ 
+    <div class="projeto">
+      <div class="projeto-header" onclick="toggleProjeto(this)">
+        <span>Site para Barbearia (em desenvolvimento)</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="projeto-body">
+        Desenvolvimento de site completo para um cliente real, com foco em usabilidade e identidade visual do negócio. Inclui páginas de apresentação, serviços, galeria e informações de contato.
+        <div><span class="badge">HTML5</span><span class="badge">CSS3</span><span class="badge">JavaScript</span></div>
+        <p style="margin-top:10px; margin-bottom:0;"><em>Repositório privado</em></p>
+      </div>
+    </div>
+ 
     <div class="projeto">
       <div class="projeto-header" onclick="toggleProjeto(this)">
         <span>Sistema de Cadastro de Veículos</span>
@@ -211,9 +245,10 @@
       </div>
       <div class="projeto-body">
         Sistema desenvolvido em C utilizando arrays e funções para cadastro e gerenciamento de veículos, com foco em organização de dados e lógica de programação.
+        <div><span class="badge">C</span></div>
       </div>
     </div>
-  
+ 
     <div class="projeto">
       <div class="projeto-header" onclick="toggleProjeto(this)">
         <span>Sistema de Gerenciamento de Hotel</span>
@@ -221,9 +256,32 @@
       </div>
       <div class="projeto-body">
         Projeto com foco no controle de operações de um hotel, incluindo organização de dados, gerenciamento e aplicação de lógica de programação.
+        <div><span class="badge">C</span></div>
       </div>
     </div>
-  
+ 
+    <div class="projeto">
+      <div class="projeto-header" onclick="toggleProjeto(this)">
+        <span>Aplicações em Java</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="projeto-body">
+        Implementação de projetos com foco em orientação a objetos, desenvolvidos na graduação e em estudos autônomos.
+        <div><span class="badge">Java</span></div>
+      </div>
+    </div>
+ 
+    <div class="projeto">
+      <div class="projeto-header" onclick="toggleProjeto(this)">
+        <span>Banco de Dados Relacional</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="projeto-body">
+        Modelagem e manipulação de bancos de dados relacionais em projetos acadêmicos, com criação de tabelas, consultas SQL e relacionamentos entre entidades.
+        <div><span class="badge">MySQL</span><span class="badge">PostgreSQL</span></div>
+      </div>
+    </div>
+ 
     <div class="projeto">
       <div class="projeto-header" onclick="toggleProjeto(this)">
         <span>Site de Identificação de Fake News</span>
@@ -231,23 +289,27 @@
       </div>
       <div class="projeto-body">
         Projeto web desenvolvido com HTML e CSS para identificação e apresentação de informações sobre notícias falsas.
+        <div><span class="badge">HTML5</span><span class="badge">CSS3</span></div>
       </div>
     </div>
-  
+ 
     <p style="margin-top:15px;">Confira meus projetos completos:</p>
-  
+ 
     <a class="btn" href="https://github.com/Vini90fs" target="_blank">
       <i class="fab fa-github"></i> GitHub
     </a>
   </div>
-
+ 
   <div class="card">
     <h2>Habilidades</h2>
     <ul>
       <li>C, C++</li>
       <li>Java</li>
       <li>Python</li>
-      <li>Desenvolvimento Front-End</li>
+      <li>JavaScript (básico)</li>
+      <li>Desenvolvimento Front-End (HTML5, CSS3)</li>
+      <li>Back-End: Spring Boot</li>
+      <li>Banco de Dados: MySQL, PostgreSQL</li>
       <li>Git e GitHub</li>
       <li>Programação Orientada a Objetos</li>
       <li>Estruturas de Dados</li>
@@ -255,17 +317,18 @@
       <li>Resolução de Problemas</li>
     </ul>
   </div>
-
+ 
   <div class="card">
     <h2>Idiomas</h2>
     <ul>
-      <li>Inglês — Avançado</li>
+      <li>Português — Nativo</li>
+      <li>Inglês — Avançado (B2-C1)</li>
       <li>Espanhol — Intermediário</li>
     </ul>
   </div>
-
+ 
 </div>
-
+ 
   <script>
     function toggleProjeto(element) {
       const body = element.nextElementSibling;
@@ -280,7 +343,7 @@
       }
     }
     </script>
-
+ 
 </body>
 </html>
 
