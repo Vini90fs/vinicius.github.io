@@ -2,326 +2,488 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Vinicius Cardoso</title>
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinícius Cardoso | Software Engineering</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
- 
+  
   <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border-color: #e2e8f0;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      color: #0f172a;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.6;
     }
- 
+
     html {
       scroll-behavior: smooth;
     }
- 
+
     .container {
       max-width: 900px;
       margin: auto;
       padding: 40px 20px;
     }
- 
+
+    /* Header / Topo */
     .topo {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 24px;
+      margin-bottom: 30px;
     }
- 
+
     .topo img {
       width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--bg-card);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
- 
-    h1 {
-      color: #0f172a;
+
+    .header-info h1 {
       margin: 0;
+      font-size: 2.2rem;
+      color: var(--text-main);
     }
- 
-    h2 {
-      color: #0f172a;
-      margin-top: 40px;
+
+    .header-info p {
+      margin: 5px 0 0 0;
+      font-size: 1.1rem;
+      color: var(--primary);
+      font-weight: 600;
     }
- 
+
+    .header-info .subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 2px;
+    }
+
+    /* Cards */
     .card {
-      background: white;
-      padding: 20px;
+      background: var(--bg-card);
+      padding: 24px;
       border-radius: 12px;
-      margin-top: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: 0.2s;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      border: 1px solid var(--border-color);
     }
- 
-    .card:hover {
-      transform: translateY(-5px);
-    }
- 
-    p {
-      line-height: 1.6;
-    }
- 
-    ul {
-      padding-left: 20px;
-    }
- 
-    a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: bold;
-    }
- 
-    .btn {
+
+    h2 {
+      color: var(--text-main);
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 1.4rem;
+      border-bottom: 2px solid var(--primary);
       display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    /* Contact Grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
       margin-top: 10px;
-      padding: 10px 15px;
-      background: #2563eb;
-      color: white;
-      border-radius: 8px;
-      transition: 0.2s;
     }
- 
-    .btn:hover {
-      transform: scale(1.05);
-      background: #1d4ed8;
-    }
- 
-    hr {
-      border: none;
-      height: 1px;
-      background: #e2e8f0;
-      margin: 20px 0;
-    }
- 
-    /* BOTÃO DE IDIOMA */
-    .lang-switch {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+
+    .contact-item {
       display: flex;
-      gap: 8px;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
     }
- 
-    .lang-btn {
-      padding: 6px 12px;
-      border-radius: 8px;
-      background: #e2e8f0;
-      color: #0f172a;
+
+    .contact-item i {
+      color: var(--primary);
+      font-size: 1.2rem;
+      width: 24px;
+      text-align: center;
+    }
+
+    .contact-item a {
+      color: var(--text-main);
       text-decoration: none;
-      font-weight: bold;
-      transition: 0.2s;
+      font-weight: 500;
     }
- 
-    .lang-btn:hover {
-      background: #2563eb;
-      color: white;
+
+    .contact-item a:hover {
+      color: var(--primary);
     }
- 
+
+    /* Projects */
     .projeto {
-      margin-bottom: 10px;
-      border: 1px solid #e2e8f0;
+      margin-bottom: 12px;
+      border: 1px solid var(--border-color);
       border-radius: 8px;
       overflow: hidden;
+      background: var(--bg-card);
     }
-    
+
     .projeto-header {
-      padding: 12px;
+      padding: 16px;
       cursor: pointer;
-      background: #f1f5f9;
+      background: #f8fafc;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-weight: bold;
-      transition: 0.2s;
+      font-weight: 600;
+      transition: background 0.2s;
+      user-select: none;
     }
-    
+
     .projeto-header:hover {
-      background: #e2e8f0;
+      background: #f1f5f9;
     }
-    
+
+    .projeto-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .projeto-title i {
+      color: var(--primary);
+    }
+
     .projeto-body {
-      padding: 12px;
+      padding: 20px;
       display: none;
       background: white;
+      border-top: 1px solid var(--border-color);
     }
- 
+
+    .projeto-body.active {
+      display: block;
+    }
+
+    .badges {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
     .badge {
       display: inline-block;
-      background: #e2e8f0;
-      color: #0f172a;
+      background: #eff6ff;
+      color: var(--primary);
       font-size: 0.8rem;
-      font-weight: bold;
-      padding: 3px 10px;
+      font-weight: 600;
+      padding: 4px 12px;
       border-radius: 999px;
-      margin-right: 6px;
-      margin-top: 6px;
+      border: 1px solid #bfdbfe;
+    }
+
+    .btn-github {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 8px 16px;
+      background: var(--text-main);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .btn-github:hover {
+      background: #334155;
+    }
+
+    /* Skills List */
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .skill-category h3 {
+      margin: 0 0 8px 0;
+      font-size: 1rem;
+      color: var(--text-main);
+    }
+
+    .skill-category ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skill-category li {
+      padding: 4px 0;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 600px) {
+      .topo {
+        flex-direction: column;
+        text-align: center;
+      }
+      .header-info h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
- 
 <body>
- 
-<div class="lang-switch">
-  <a href="index.html" class="lang-btn">PT</a>
-  <a href="index-en.html" class="lang-btn">EN</a>
-</div>
- 
+
 <div class="container">
- 
+
+  <!-- HEADER -->
   <div class="topo">
-    <img src="foto.jpg" alt="Vinicius">
-    <div>
-      <h1>Vinicius Fernandes Soares Cardoso</h1>
-      <p>Estudante de Engenharia de Software</p>
+    <img src="foto.jpg" alt="Vinícius Cardoso">
+    <div class="header-info">
+      <h1>Vinícius Cardoso</h1>
+      <p>Software Engineering Student</p>
+      <div class="subtitle">Systems Fundamentals & OOP | PUC Minas</div>
     </div>
   </div>
- 
+
+  <!-- SOBRE -->
   <div class="card">
-    <h2>Dados Pessoais</h2>
- 
-    <p><strong>Idade:</strong> 20 anos</p>
-    <p><i class="fas fa-map-marker-alt"></i> Belo Horizonte - MG</p>
-    <p><i class="fas fa-envelope"></i> vini90fs@gmail.com</p>
-    <p><i class="fab fa-instagram"></i> @vini.fsc</p>
-    <p><i class="fas fa-phone"></i> +55 (31) 97301-0684</p>
- 
-    <p><i class="fab fa-linkedin"></i> 
-      <a href="https://www.linkedin.com/in/vinicius-fernandes-soares-cardoso-7b6ab2287" target="_blank">
-        LinkedIn
-      </a>
-    </p>
-  </div>
- 
-  <div class="card">
-    <h2>Objetivo</h2>
+    <h2>Sobre</h2>
     <p>
-      Atuar na área de tecnologia, aplicando meus conhecimentos em programação e desenvolvimento de software,
-      contribuindo para a construção de soluções eficientes e meu crescimento profissional.
+      Estudante de Engenharia de Software na <strong>PUC Minas</strong> com foco em <strong>fundamentos de sistemas</strong> e <strong>Programação Orientada a Objetos (OOP)</strong>. Minha base é construída sobre <strong>C</strong> (gestão de memória e ponteiros) e <strong>C++/Java</strong> (modelagem de sistemas).
     </p>
-  </div>
- 
-  <div class="card">
-    <h2>Sobre mim</h2>
- 
     <p>
-      Sou estudante de Engenharia de Software na PUC Minas, desde sempre tive interesse em tecnologia em geral, desenvolvimento de software e resolução de problemas.
-      Tenho experiência prática em linguagens como C, C++, Java e Python, além de familiaridade com desenvolvimento Front-End (HTML5, CSS3 e JavaScript) e Back-End com Spring Boot.
-      Também tenho experiência com bancos de dados relacionais (MySQL e PostgreSQL), adquirida por meio de projetos acadêmicos e estudos independentes, além da facilidade do uso de ferramentas
-      de Inteligência Artificial no fluxo de desenvolvimento para aumento de produtividade e resolução eficiente de problemas.
+      Desenvolvo ferramentas em <strong>Python</strong> para automação e aplico padrões de arquitetura MVC em projetos full-stack. Utilizo <strong>IA generativa (Claude, Copilot)</strong> como ferramenta estratégica para refatoração, code review e aceleração de ciclos de desenvolvimento, validando sempre a lógica por trás do código.
     </p>
- 
     <p>
-      Estou focado principalmente em evoluir minhas habilidades através de projetos práticos e estudos.
-      Tenho facilidade para trabalhar em equipe, boa comunicação, proatividade e sempre disposição para aprender.
+      Possuo <strong>comunicação técnica em inglês (B2-C1)</strong> para colaboração em contextos globais e leitura de documentação nativa.
     </p>
- 
   </div>
- 
+
+  <!-- CONTATO -->
   <div class="card">
-    <h2>Formação</h2>
-    <p><strong>Ensino Médio Completo</strong> — Coleguium Ouro Preto</p>
-    <p><strong>Engenharia de Software</strong> — PUC Minas — 2° período, com disciplinas avançadas já concluídas — Previsão de conclusão: 2028</p>
+    <h2>Contato</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:vini90fs@gmail.com">vini90fs@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/vinicius-fernandes-soares-cardoso-7b6ab2287" target="_blank">LinkedIn</a>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/Vini90fs" target="_blank">GitHub</a>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Belo Horizonte - MG, Brasil</span>
+      </div>
+    </div>
   </div>
- 
+
+  <!-- PROJETOS -->
   <div class="card">
-    <h2>Projetos</h2>
- 
+    <h2>Projetos em Destaque</h2>
+
+    <!-- Projeto 1: Username Checker -->
     <div class="projeto">
       <div class="projeto-header" onclick="toggleProjeto(this)">
-        <span>Site para Barbearia (em desenvolvimento)</span>
+        <div class="projeto-title">
+          <i class="fab fa-python"></i> Username Checker (OSINT)
+        </div>
         <i class="fas fa-chevron-down"></i>
       </div>
       <div class="projeto-body">
-        Desenvolvimento de site completo para um cliente real, com foco em usabilidade e identidade visual do negócio. Inclui páginas de apresentação, serviços, galeria e informações de contato.
-        <div><span class="badge">HTML5</span><span class="badge">CSS3</span><span class="badge">JavaScript</span></div>
-        <p style="margin-top:10px; margin-bottom:0;"><em>Repositório privado</em></p>
+        <p>Ferramenta OSINT de linha de comando para verificação de perfis em plataformas públicas. Arquitetura modular em Python com tratamento de exceções e heurísticas de HTML.</p>
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">OOP</span>
+          <span class="badge">Automation</span>
+        </div>
+        <a href="https://github.com/Vini90fs/username-checker" target="_blank" class="btn-github">
+          <i class="fab fa-github"></i> Ver no GitHub
+        </a>
       </div>
     </div>
- 
+
+    <!-- Projeto 2: Hotel Management -->
     <div class="projeto">
       <div class="projeto-header" onclick="toggleProjeto(this)">
-        <span>Sistema de Gerenciamento de Hotel</span>
+        <div class="projeto-title">
+          <i class="fas fa-hotel"></i> Hotel Management System
+        </div>
         <i class="fas fa-chevron-down"></i>
       </div>
       <div class="projeto-body">
-        Projeto com foco no controle de operações de um hotel, incluindo organização de dados, gerenciamento e aplicação de lógica de programação.
-        <div><span class="badge">C</span></div>
+        <p>Sistema de gestão hoteleira aplicando OOP (classes, encapsulamento e composição) e contêineres STL para gerenciar a alocação de quartos dinamicamente.</p>
+        <div class="badges">
+          <span class="badge">C++</span>
+          <span class="badge">STL</span>
+          <span class="badge">OOP</span>
+        </div>
+        <a href="https://github.com/Vini90fs/hotel-management-system-c" target="_blank" class="btn-github">
+          <i class="fab fa-github"></i> Ver no GitHub
+        </a>
       </div>
     </div>
- 
+
+    <!-- Projeto 3: Dealership -->
     <div class="projeto">
       <div class="projeto-header" onclick="toggleProjeto(this)">
-        <span>Aplicações em Java</span>
+        <div class="projeto-title">
+          <i class="fas fa-car"></i> Dealership System
+        </div>
         <i class="fas fa-chevron-down"></i>
       </div>
       <div class="projeto-body">
-        Implementação de projetos com foco em orientação a objetos, desenvolvidos na graduação e em estudos autônomos.
-        <div><span class="badge">Java</span></div>
+        <p>Sistema de registro de veículos em C com modularização de código (structs), validação de placas (Mercosul) e persistência de dados em arquivos.</p>
+        <div class="badges">
+          <span class="badge">C</span>
+          <span class="badge">Memory Management</span>
+          <span class="badge">File I/O</span>
+        </div>
+        <a href="https://github.com/Vini90fs/Dealership" target="_blank" class="btn-github">
+          <i class="fab fa-github"></i> Ver no GitHub
+        </a>
       </div>
     </div>
- 
+
+    <!-- Projeto 4: Barbearia -->
     <div class="projeto">
       <div class="projeto-header" onclick="toggleProjeto(this)">
-        <span>Banco de Dados Relacional</span>
+        <div class="projeto-title">
+          <i class="fas fa-store"></i> Site para Barbearia
+        </div>
         <i class="fas fa-chevron-down"></i>
       </div>
       <div class="projeto-body">
-        Modelagem e manipulação de bancos de dados relacionais em projetos acadêmicos, com criação de tabelas, consultas SQL e relacionamentos entre entidades.
-        <div><span class="badge">MySQL</span><span class="badge">PostgreSQL</span></div>
+        <p>Site institucional responsivo focado em usabilidade e identidade visual, com páginas de apresentação, serviços e contato.</p>
+        <div class="badges">
+          <span class="badge">HTML5</span>
+          <span class="badge">CSS3</span>
+          <span class="badge">JavaScript</span>
+        </div>
+        <a href="#" class="btn-github" style="opacity: 0.7;">
+          <i class="fas fa-lock"></i> Repositório Privado
+        </a>
       </div>
     </div>
- 
-    <p style="margin-top:15px;">Confira meus projetos completos:</p>
- 
-    <a class="btn" href="https://github.com/Vini90fs" target="_blank">
-      <i class="fab fa-github"></i> GitHub
-    </a>
+
   </div>
- 
+
+  <!-- HABILIDADES -->
   <div class="card">
-    <h2>Habilidades</h2>
-    <ul>
-      <li>C, C++</li>
-      <li>Java</li>
-      <li>Python</li>
-      <li>JavaScript</li>
-      <li>Desenvolvimento Front-End (HTML5, CSS3)</li>
-      <li>Back-End: Spring Boot</li>
-      <li>Banco de Dados: MySQL, PostgreSQL</li>
-      <li>Git e GitHub</li>
-      <li>Programação Orientada a Objetos</li>
-      <li>Estruturas de Dados</li>
-      <li>Uso avançado de IA aplicada à produtividade e desenvolvimento</li>
-      <li>Resolução de Problemas</li>
-    </ul>
+    <h2>Habilidades Técnicas</h2>
+    <div class="skills-list">
+      <div class="skill-category">
+        <h3>Linguagens & Paradigmas</h3>
+        <ul>
+          <li>C, C++, Java, Python, JavaScript</li>
+          <li>Programação Orientada a Objetos (OOP)</li>
+          <li>Estruturas de Dados</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Back-End & APIs</h3>
+        <ul>
+          <li>Spring Boot</li>
+          <li>RESTful APIs</li>
+          <li>JDBC</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Banco de Dados</h3>
+        <ul>
+          <li>MySQL, PostgreSQL</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Ferramentas & IA</h3>
+        <ul>
+          <li>Git, GitHub, Linux</li>
+          <li>Claude, GitHub Copilot</li>
+        </ul>
+      </div>
+    </div>
   </div>
- 
+
+  <!-- IDIOMAS -->
   <div class="card">
     <h2>Idiomas</h2>
-    <ul>
-      <li>Português — Nativo</li>
-      <li>Inglês — Avançado (B2-C1)</li>
-      <li>Espanhol — Intermediário</li>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      <li style="padding: 5px 0;"><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i> <strong>Português</strong> — Nativo</li>
+      <li style="padding: 5px 0;"><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i> <strong>Inglês</strong> — Avançado (B2-C1) | Comunicação Técnica</li>
+      <li style="padding: 5px 0;"><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i> <strong>Espanhol</strong> — Intermediário</li>
     </ul>
   </div>
- 
+
+    <!-- FORMAÇÃO -->
+  <div class="card">
+    <h2>Formação Acadêmica</h2>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      <li style="padding: 8px 0; border-bottom: 1px solid var(--border-color);">
+        <strong>Engenharia de Software</strong> — PUC Minas<br>
+        <small style="color: var(--text-muted);">Cursando (3º período) | Previsão de conclusão: 2028</small>
+      </li>
+      <li style="padding: 8px 0;">
+        <strong>Ensino Médio</strong> — Coleguium Ouro Preto<br>
+        <small style="color: var(--text-muted);">Concluído</small>
+      </li>
+    </ul>
+  </div>
+
 </div>
- 
-  <script>
-    function toggleProjeto(element) {
-      const body = element.nextElementSibling;
-      const icon = element.querySelector("i");
+
+<footer>
+  &copy; 2024 Vinícius Cardoso. Desenvolvido com HTML, CSS e JavaScript.
+</footer>
+
+<script>
+  function toggleProjeto(element) {
+    const body = element.nextElementSibling;
+    const icon = element.querySelector(".fa-chevron-down");
     
-      if (body.style.display === "block") {
-        body.style.display = "none";
-        icon.style.transform = "rotate(0deg)";
-      } else {
-        body.style.display = "block";
-        icon.style.transform = "rotate(180deg)";
-      }
+    if (body.classList.contains("active")) {
+      body.classList.remove("active");
+      icon.style.transform = "rotate(0deg)";
+    } else {
+      body.classList.add("active");
+      icon.style.transform = "rotate(180deg)";
     }
-    </script>
- 
+  }
+
+  // Opcional: Abrir o primeiro projeto automaticamente ao carregar
+  document.addEventListener('DOMContentLoaded', () => {
+    const firstHeader = document.querySelector('.projeto-header');
+    if (firstHeader) {
+      firstHeader.click();
+    }
+  });
+</script>
+
 </body>
 </html>
 
